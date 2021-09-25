@@ -1,0 +1,39 @@
+{
+    "name": "Shell-Bot",
+    "description": "Telegram bot for executing shell commands",
+    "keywords": [
+      "telegram",
+      "bot",
+      "shell"
+    ],
+    "repository": "https://github.com/aishik2005/shell",
+    "website": "https://github.com/aishik2005/shell",
+    "success_url": "https://github.com/aishik2005/shell/blob/master/README.md",
+    "stack": "container",
+    "env": {
+      "BOT_TOKEN": {
+        "description": "Get your bot token by talking to @Botfather",
+        "required": true
+      },
+      "OWNER_ID": {
+        "description": "Your Telegram User ID (go to @MissRose_bot and type /id to get your id)",
+        "required": true
+      },
+      "RCLONE_CONFIG_BASE64": {
+        "description": "Encode your Rclone config using (https://www.base64encode.org/) and paste the result from that website in this place",
+        "required": false
+      },
+      "CREDENTIALS_LINK": {
+        "description": "Put Permanent download link(from Google Drive Index) of your credentials.json File",
+        "required": false
+      },
+      "ACCOUNTS_FOLDER_LINK": {
+        "description": "Put Permanent download link(from Google Drive Index) of your accounts.zip File",
+        "required": false
+      },
+      "LANG": {
+        "description": "Setting the encoding to UTF-8 . Dont edit this value",
+        "value": "C.UTF-8"
+      }
+    }
+}
