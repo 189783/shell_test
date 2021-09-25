@@ -14,7 +14,6 @@ or
 Easy Detailed Tutorial here: https://telegra.ph/ShellBot-Cloning-Tutorial-08-22
 
 
-Easy Detailed Heroku Tutorial here: https://telegra.ph/ShellBot-Cloning-Tutorial-08-22
 
 # ⚛️ Deploying on Heroku
 
@@ -49,7 +48,8 @@ currently *not* supported.
 ## ☂ Deploying on Railway.app
 
 1 - For Direct Deploy,Click on the Below Button
-<p><a href="https://railway.app/new/template?template=https://github.com/aishik2005/shell&envs=BOT_TOKEN,OWNER_ID,RCLONE_CONFIG_BASE64,CREDENTIALS_LINK,ACCOUNTS_FOLDER_LINK"><img src="https://img.shields.io/badge/Deploy%20To%20Railway-black?style=for-the-badge&logo=railway" alt="Deploy to Railway" /></a></p>
+
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https%3A%2F%2Fgithub.com%2Faishik2005%2Fshell&envs=BOT_TOKEN%2COWNER_ID%2CRCLONE_CONFIG_BASE64%2CCREDENTIALS_LINK%2CACCOUNTS_FOLDER_LINK&BOT_TOKENDesc=Get+your+bot+token+by+talking+to+%40Botfather&OWNER_IDDesc=Your+Telegram+User+ID+%28go+to+%40MissRose_bot+and+type+%2Fid+to+get+your+id%29&RCLONE_CONFIG_BASE64Desc=Encode+your+Rclone+config+using+%28https%3A%2F%2Fwww.base64encode.org%2F%29+and+paste+the+result+from+that+website+in+this+place&CREDENTIALS_LINKDesc=Put+Permanent+download+link%28from+Google+Drive+Index%29+of+your+credentials.json+File&ACCOUNTS_FOLDER_LINKDesc=Put+Permanent+download+link%28from+Google+Drive+Index%29+of+your+accounts.zip+File&referralCode=GD5pqS)
 
 2 - Fill the following Environment Values as per below Instructions:
 
