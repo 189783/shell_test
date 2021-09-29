@@ -2,7 +2,7 @@ import sys
 import os
 import getpass
 text_file = open("rc.conf", "w")
-text_file.write("[GC]\ntype = drive\nscope = drive\nservice_account_file = accounts/1.json\nservice_account_file_path = accounts/")
+text_file.write("[GC]\ntype = drive\nscope = drive\nservice_account_file = /usr/src/app/accounts/1.json\nservice_account_file_path = /usr/src/app/accounts/")
 text_file.close()
 username = getpass.getuser()
 print('\033[1;31;40mHey,Sexy! wanna clone some TBs?\nLets Get you started\n')
