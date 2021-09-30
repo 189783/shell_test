@@ -1,8 +1,5 @@
 FROM python:3-slim-buster
 
-WORKDIR /root
-COPY .config/rclone/rclone.conf /root/.config/rclone/rclone.conf
-
 # Install all the required packages
 WORKDIR /usr/src/app
 RUN chmod 777 /usr/src/app
@@ -71,6 +68,8 @@ RUN gem install rmega
 
 # Copies config(if it exists)
 COPY . .
+
+COPY .config/rclone/rclone.conf /root/.config/rclone/rclone.conf
 COPY .config/rclone/rclone.conf /usr/src/app/root/.config/rclone/rclone.conf
 COPY .config/rclone/rclone.conf /usr/src/app/.config/rclone/rclone.conf
 
