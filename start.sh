@@ -23,5 +23,4 @@ fi
 
 echo "SETUP COMPLETED"
 
-http-server -p $PORT &
 node server
