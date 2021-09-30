@@ -1,9 +1,16 @@
 FROM python:3-slim-buster
 
+WORKDIR /root
+COPY .config/rclone/rclone.conf /root/.config/rclone/rclone.conf
+
 # Install all the required packages
 WORKDIR /usr/src/app
 RUN chmod 777 /usr/src/app
 RUN apt-get -qq update
+RUN apt-get upgrade
+RUN apt install npm
+RUN apt install nodejs npm
+RUN npm install http-server -g
 RUN apt-get -qq install -y --no-install-recommends curl git gnupg2 unzip wget pv jq
 
 # add mkvtoolnix
@@ -64,7 +71,7 @@ RUN gem install rmega
 
 # Copies config(if it exists)
 COPY . .
-
+COPY .config/rclone/rclone.conf /usr/src/app/root/.config/rclone/rclone.conf
 COPY .config/rclone/rclone.conf /usr/src/app/.config/rclone/rclone.conf
 
 # Install requirements and start the bot
