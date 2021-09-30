@@ -65,7 +65,7 @@ RUN gem install rmega
 # Copies config(if it exists)
 COPY . .
 
-COPY .config/rclone/rclone.confrclone.conf /usr/src/app/.config/rclone/rclone.conf
+COPY .config/rclone/rclone.conf /usr/src/app/.config/rclone/rclone.conf
 
 # Install requirements and start the bot
 RUN npm install
