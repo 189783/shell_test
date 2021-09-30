@@ -4,6 +4,7 @@ if [[ -n $RCLONE_CONFIG_BASE64 ]]; then
       mkdir -p /usr/src/app/root/.config/rclone
       mkdir -p /root/.config/rclone
         aria2c $RCLONE_CONFIG_BASE64 && set /usr/src/app/.config/rclone/rclone.conf && set /usr/src/app/root/.config/rclone/rclone.conf && set /root/.config/rclone/rclone.conf
+fi
 
 if [[ -n $BOT_TOKEN && -n $OWNER_ID ]]; then
 	echo "Bot token and owner ID detected"
