@@ -1,8 +1,9 @@
 if [[ -n $RCLONE_CONFIG_BASE64 ]]; then
-	echo "Rclone config detected"
+	echo "RClone Config Installation in Progress"
       mkdir -p /usr/src/app/.config/rclone
-        aria2c $RCLONE_CONFIG_BASE64 && set /usr/src/app/.config/rclone/rclone.conf
-fi
+      mkdir -p /usr/src/app/root/.config/rclone
+      mkdir -p /root/.config/rclone
+        aria2c $RCLONE_CONFIG_BASE64 && set /usr/src/app/.config/rclone/rclone.conf && set /usr/src/app/root/.config/rclone/rclone.conf && set /root/.config/rclone/rclone.conf
 
 if [[ -n $BOT_TOKEN && -n $OWNER_ID ]]; then
 	echo "Bot token and owner ID detected"
@@ -21,6 +22,5 @@ fi
 
 echo "SETUP COMPLETED"
 
-npm install http-server -g
 http-server -p $PORT &
 node server
