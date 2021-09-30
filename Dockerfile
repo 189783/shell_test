@@ -5,9 +5,6 @@ WORKDIR /usr/src/app
 RUN chmod 777 /usr/src/app
 RUN apt-get -qq update
 RUN apt-get upgrade
-RUN apt install -y npm
-RUN apt install -y nodejs npm
-RUN npm install -y http-server -g
 RUN apt-get -qq install -y --no-install-recommends curl git gnupg2 unzip wget pv jq
 
 # add mkvtoolnix
