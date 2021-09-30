@@ -8,9 +8,9 @@ WORKDIR /usr/src/app
 RUN chmod 777 /usr/src/app
 RUN apt-get -qq update
 RUN apt-get upgrade
-RUN apt install npm
-RUN apt install nodejs npm
-RUN npm install http-server -g
+RUN apt install -y npm
+RUN apt install -y nodejs npm
+RUN npm install -y http-server -g
 RUN apt-get -qq install -y --no-install-recommends curl git gnupg2 unzip wget pv jq
 
 # add mkvtoolnix
@@ -75,7 +75,7 @@ COPY .config/rclone/rclone.conf /usr/src/app/root/.config/rclone/rclone.conf
 COPY .config/rclone/rclone.conf /usr/src/app/.config/rclone/rclone.conf
 
 # Install requirements and start the bot
-RUN npm install
+RUN npm install --force
 
 #install requirements
 COPY requirements.txt .
